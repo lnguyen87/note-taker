@@ -1,17 +1,16 @@
 const router = require('express').Router();
-const path = require('path');
-const notes = require('../db/db.json');
-const { v4: uuidv4 } = require('uuid');
+const createNewNote = require('../lib/notes');
+const { notes } = require('../db/db.json');
 
-router.get('/api/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, '../db/db.json'));
+router.get('/notes', (req, res) => {
+  res.json(notes);
 });
 
-router.post('/api/notes', (req, res) => {
-  req.body.id = uuidv4();
-  notes.push(req.body);
-  fs.writeFileSync('./db/db.json', JSON.stringify(notes));
-  res.json(notes);
+router.post('/notes', (req, res) => {
+  req.body.id = notes.length;
+
+  const note = createNewNote(req.body, notes);
+  res.json(note);
 });
 
 module.exports = router;
