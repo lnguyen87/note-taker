@@ -3,7 +3,7 @@
 ## Description
 
 Simple Note Taker App
-App is also hosted on Heroku: https://git.heroku.com/evening-stream-01534.git
+App is also hosted on Heroku: https://evening-stream-01534.herokuapp.com/
 
 ## Table of Contents
 
@@ -31,6 +31,7 @@ App is also hosted on Heroku: https://git.heroku.com/evening-stream-01534.git
 
 ## Usage
 
+https://evening-stream-01534.herokuapp.com/
 https://watch.screencastify.com/v/VWM0dYEk6nwVweTSXjlv
 
 ![video preview](assets/sample.gif)
